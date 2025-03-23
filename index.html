@@ -16,7 +16,14 @@
         </div>
     </div>
 
-    <audio src="music.mp3" autoplay loop></audio> <!-- 添加自动播放音乐 -->
-    <script src="script.js"></script>
+    <audio id="audioPlayer" src="music.mp3"></audio> <!-- 添加自动播放音乐 -->
+    <script>
+        document.getElementById('yes').addEventListener('click', function() {
+            document.getElementById('audioPlayer').play();
+        });
+        document.getElementById('no').addEventListener('click', function() {
+            document.getElementById('audioPlayer').play();
+        });
+    </script>
 </body>
 </html>
