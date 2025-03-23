@@ -7,10 +7,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <audio autoplay loop>
-        <source src="music.mp3" type="audio/mpeg">
-        您的浏览器不支持音频播放。
-    </audio>
     <div class="container">
         <img id="mainImage" src="images/heart.png" alt="爱心">
         <h1 id="question">可以成为我的恋人吗？</h1>
@@ -20,6 +16,27 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <audio id="music" loop>
+        <source src="music.mp3" type="audio/mpeg">
+        您的浏览器不支持音频播放。
+    </audio>
+
+    <script>
+        // 获取音频元素
+        const music = document.getElementById('music');
+
+        // 获取按钮元素
+        const yesButton = document.getElementById('yes');
+        const noButton = document.getElementById('no');
+
+        // 在用户点击按钮时播放音频
+        yesButton.addEventListener('click', () => {
+            music.play();
+        });
+
+        noButton.addEventListener('click', () => {
+            music.play();
+        });
+    </script>
 </body>
 </html>
